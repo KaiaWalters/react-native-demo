@@ -1,21 +1,20 @@
-import React from "react";
-import {Text, StyleSheet, View} from "react-native";
+import React, {useState} from "react";
+import {Text, StyleSheet, View, Button} from "react-native";
 
 const CounterScreen = () => {
-    const count = 0
-    const countUp = () => {
-        this.count++
-    }
-    const countDown = () => {
-        this.count--
-    }
+    //array destructuring 
+    const [counter, setCounter] = useState(0)
     
     return (
         <View>
             <Text style={styles.header}>Counter</Text>
-            <Button title='Increase' onPress='countUp()'/>
-            <Button title='Decrease' onPress='countDown()'/>
-            <Text>Current Count: {count}</Text>
+            <Button title='Increase' onPress={() => {
+                setCounter(counter + 1) 
+            }}/>
+             <Button title='Decrease' onPress={() => {
+                setCounter(counter - 1) 
+            }}/>
+            <Text>Current Count: {counter}</Text>
         </View>
     )
 };

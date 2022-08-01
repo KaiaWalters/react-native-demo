@@ -1,18 +1,21 @@
 import React from 'react';
 import { Text, StyleSheet, View} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import render from 'react-native-web/dist/cjs/exports/render';
 
-const Button = ({props}) => {
-  return (
-    <View>
-        <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate(props.location)}>
-        <Text style={styles.buttonText}>{props.title}</Text>
-        </TouchableOpacity>
-    </View> 
-  );
-};
+const Button = (props) => {
+  function constructor(props) {
+    super(props)
+  }
+    return (
+      <View>
+          <TouchableOpacity
+          style={styles.button}>
+          <Text style={styles.buttonText}>{props.title}</Text>
+          </TouchableOpacity>
+      </View> 
+    );
+  };
 
 const styles = StyleSheet.create({
 

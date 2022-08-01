@@ -5,6 +5,8 @@ import HomeScreen from "./src/screens/HomeScreen";
 import ImageScreen from "./src/screens/ImageScreen";
 import ListScreen from "./src/screens/ListScreen";
 import CounterScreen from "./src/screens/CounterScreen";
+import ColorScreen from "./src/screens/ColorScreen";
+import ColorPicker from "./src/screens/ColorPicker"
 
 const navigator = createStackNavigator(
   {
@@ -12,7 +14,9 @@ const navigator = createStackNavigator(
     Components: ComponentScreen,
     List: ListScreen,
     Images: ImageScreen, 
-    Counter: CounterScreen
+    Counter: CounterScreen,
+    Color: ColorScreen,
+    Picker: ColorPicker 
   },
   {
     initialRouteName: "Home",

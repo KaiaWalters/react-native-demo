@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View} from 'react-native';
+import { Text, StyleSheet, View, Button} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
@@ -8,10 +8,28 @@ const HomeScreen = ({navigation}) => {
    <View style={styles.container}>
       <Text style={styles.text}>MemoMap</Text>
       <View style={styles.navBar}>
-        <Button title="Your Shops" location="Images"/>
-        <Button title="Item Lists" location="List"/>
-      </View>
 
+        <Button 
+          onPress={() => navigation.navigate('List')}
+          title="Your Shops"
+         />
+        <Button 
+          onPress={() => navigation.navigate('Images')}
+          title="Item Lists"
+        />
+        <Button 
+          onPress={() => navigation.navigate('Counter')}
+          title="Counter"
+        />
+         <Button 
+          onPress={() => navigation.navigate('Color')}
+          title="Color"
+        />
+         <Button 
+          onPress={() => navigation.navigate('Picker')}
+          title="Color Picker"
+        />
+      </View>
     </View>
   );
 };
@@ -26,7 +44,6 @@ const styles = StyleSheet.create({
   },
   navBar: {
     marginTop:20,
-    flexDirection:'row'
   },
   button: {
     paddingHorizontal: 40,
