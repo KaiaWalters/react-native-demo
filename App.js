@@ -6,8 +6,8 @@ import ImageScreen from "./src/screens/ImageScreen";
 import ListScreen from "./src/screens/ListScreen";
 import CounterScreen from "./src/screens/CounterScreen";
 import ColorScreen from "./src/screens/ColorScreen";
-import ColorPicker from "./src/screens/ColorPicker"
-
+import ColorPicker from "./src/screens/ColorPicker";
+  
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
